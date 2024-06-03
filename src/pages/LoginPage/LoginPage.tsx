@@ -3,7 +3,7 @@ import {FC} from "react";
 export const LoginPage: FC = () => {
     return (
         <section>
-            <div>LoginPage</div>
+            <h1>LoginPage</h1>
         </section>
     )
 }
