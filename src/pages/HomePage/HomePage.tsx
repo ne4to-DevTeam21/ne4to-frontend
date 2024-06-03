@@ -1,9 +1,18 @@
 import {FC} from "react";
-
+import styles from './HomePage.module.scss'
+import videoB from './images/main.mp4'
 export const HomePage: FC = () => {
     return (
-        <main>
-            <div>HomePage</div>
+        <main className={styles.Main}>
+            <video src={videoB} autoPlay loop muted className={styles.Video}></video>
+            <div className={styles.Content}>
+                <h1>NE4TO</h1>
+                <p>Anytime. Anywhere. Anyone.</p>
+                <div className={styles.ButtonsWrapper}>
+                    <button className={styles.Button}>Login</button>
+                    <button className={styles.Button}>Register</button>
+                </div>
+            </div>
         </main>
     )
 }
