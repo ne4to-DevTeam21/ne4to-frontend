@@ -1,6 +1,7 @@
 import {FC} from "react";
 import styles from './HomePage.module.scss'
 import videoB from './images/main.mp4'
+import {NavLink} from "react-router-dom";
 export const HomePage: FC = () => {
     return (
         <main className={styles.Main}>
@@ -9,8 +10,8 @@ export const HomePage: FC = () => {
                 <h1>NE4TO</h1>
                 <p>Anytime. Anywhere. Anyone.</p>
                 <div className={styles.ButtonsWrapper}>
-                    <button className={styles.Button}>Login</button>
-                    <button className={styles.Button}>Register</button>
+                    <NavLink to='/login' className={styles.Button}>Login</NavLink>
+                    <NavLink to='/registration' className={styles.Button}>Register</NavLink>
                 </div>
             </div>
         </main>
