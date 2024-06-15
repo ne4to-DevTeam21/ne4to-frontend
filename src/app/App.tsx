@@ -1,11 +1,10 @@
-import {FC, lazy} from "react";
-import { Routes } from 'react-router'
-import { Route } from 'react-router-dom'
-
-const HomePage = lazy(() => import('../pages/HomePage/HomePage').then(({ HomePage }) => ({ default: HomePage })))
-const LoginPage = lazy(() => import('../pages/LoginPage/LoginPage').then(({ LoginPage }) => ({ default: LoginPage })))
-const RegistrationPage = lazy(() => import('../pages/RegistrationPage/RegistrationPage').then(({ RegistrationPage }) => ({ default: RegistrationPage })))
-const RulesPage = lazy(() => import('../pages/RulesPage/RulesPage').then(({ RulesPage }) => ({ default: RulesPage })))
+import {FC} from "react";
+import {Routes} from 'react-router'
+import {Route} from 'react-router-dom'
+import {HomePage} from "../pages/HomePage/HomePage.tsx";
+import {LoginPage} from "../pages/LoginPage/LoginPage.tsx";
+import {RegistrationPage} from "../pages/RegistrationPage/RegistrationPage.tsx";
+import {RulesPage} from "../pages/RulesPage/RulesPage.tsx";
 
 export const App: FC = () => {
 
