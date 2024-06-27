@@ -6,7 +6,7 @@ import videoB from './images/main.mp4';
 import { NavLink } from "react-router-dom";
 
 export const HomePage: FC = () => {
-    const [username, setUsername] = useState("");
+    const [login, setLogin] = useState("");
     const [password, setPassword] = useState("");
     const [error, setError] = useState("");
     const [loading, setLoading] = useState(false);
@@ -18,8 +18,8 @@ export const HomePage: FC = () => {
         setLoading(true);
 
         try {
-            const response = await axios.post('http://localhost:5000/eto_nechto/login', {
-                username,
+            const response = await axios.post('http://localhost:8090/eto_nechto/login', {
+                login,
                 password
             });
 
@@ -63,8 +63,8 @@ export const HomePage: FC = () => {
                     <input
                         type="text"
                         placeholder="Логин"
-                        value={username}
-                        onChange={(e) => setUsername(e.target.value)}
+                        value={login}
+                        onChange={(e) => setLogin(e.target.value)}
                         disabled={loading}
                     />
                     <input

@@ -17,7 +17,7 @@ export const RegistrationPage: FC = () => {
         setLoading(true);
 
         try {
-            const response = await axios.post('http://localhost:5000/eto_nechto/registration', {
+            const response = await axios.post('http://localhost:8090/eto_nechto/registration', {
                 username,
                 password,
                 email
